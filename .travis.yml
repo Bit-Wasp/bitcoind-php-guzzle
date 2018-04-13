@@ -38,7 +38,7 @@ before_script:
 script:
   - make phpunit-ci
   - if [ "$CODE_STYLE" = "true" ]; then make phpcs && echo "Code style OK"; fi
-  - if [ "$EXAMPLES" = "true" ]; then make test-examples && echo "Examples OK"; fi
+  - if [ "$EXAMPLES" = "true" ]; then tools/validate_examples.sh && echo "Examples OK"; fi
 
 after_script:
   - if [ "${COVERAGE}" = "true" ]; then make scrutinizer; fi
