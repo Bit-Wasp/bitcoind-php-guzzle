@@ -1,4 +1,5 @@
 {
+    "name": "bitwasp/bitcoind-php-guzzle",
     "autoload": {
         "psr-4": {
             "BitWasp\\Bitcoind\\Guzzle\\": "src/"
